@@ -22,7 +22,7 @@ public class ModelTest {
     {
         Question question = new Question();
         //Liste mit blank values
-        boolean result = question.setQuestion("How old am I",List.of(""));
+        boolean result = question.setQuestion("How old am I",List.of("20",""));
         assertFalse(result);
         //Leere Liste
         result = question.setQuestion("What is Peters favorite food", List.of());
