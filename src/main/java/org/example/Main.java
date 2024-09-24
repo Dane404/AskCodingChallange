@@ -86,7 +86,8 @@ public class Main {
     {
         System.out.println("Asking a question which is in the system:");
         String questionInput = scanner.nextLine();
-        List<String> answers = questionController.findAnswers(questionInput);
+        //Falls beim Input ein Fragezeichen vorhanden ist, dann wird dieses entfernt, da die fragen ohne Fragezeichen gespeichert werden(das Fragezeichen wird durch den Splitvorgang entfernt)
+        List<String> answers = questionController.findAnswers(questionInput.replace("?",""));
         printAnswers(answers);
     }
     public static void printAnswers(List<String> answers)
